@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PaintActivity">
+
+    <FrameLayout
+        android:id="@+id/frm"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/fill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="630dp"
+            android:onClick="FillAct"
+            android:text="Fill -OFF"
+            android:textSize="12dp" />
+
+        <Button
+            android:id="@+id/widthPlus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="105dp"
+            android:layout_marginTop="630dp"
+            android:onClick="WidthPlus"
+            android:text="Width +"
+            android:textSize="12dp" />
+
+
+
+        <Button
+            android:id="@+id/widthMin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="630dp"
+            android:onClick="WidthMinus"
+            android:padding="10dp"
+            android:text="Width -"
+            android:textSize="12dp" />
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btnGreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="10dp"
+        android:backgroundTint="#4CAF50"
+        android:onClick="changeColor"
+        android:padding="10dp"
+        android:tag="#4CAF50"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/btnBlue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@id/btnGreen"
+        android:backgroundTint="#3F51B5"
+        android:onClick="changeColor"
+        android:padding="10dp"
+        android:tag="#3F51B5"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/btnRed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@id/btnBlue"
+        android:backgroundTint="#F44336"
+        android:onClick="changeColor"
+        android:padding="10dp"
+        android:tag="#F44336"
+        android:textSize="20dp" />
+    <Button
+        android:id="@+id/btnYellow"
+        android:tag="#FFEB3B"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/btnRed"
+        android:onClick="changeColor"
+        android:layout_marginRight="10dp"
+        android:padding="10dp"
+        android:backgroundTint="#FFEB3B"
+        android:textSize="20dp"/>
+
+
+
+    <Button
+        android:id="@+id/btnLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="addLine"
+        android:text="Line"
+        android:tag="Line"
+        android:layout_alignTop="@id/btnRect"
+        android:textSize="16sp"/>
+
+    <Button
+        android:id="@+id/btnRect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_toRightOf="@id/btnLine"
+        android:onClick="addRect"
+        android:tag="Rect"
+        android:text="Rect"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btnCircle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/btnRect"
+        android:layout_toRightOf="@id/btnPath"
+        android:onClick="addCircle"
+        android:text="Circle"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btnPath"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/btnRect"
+        android:layout_toRightOf="@id/btnRect"
+        android:onClick="addPath"
+        android:text="Path"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btnPoint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/btnCircle"
+        android:background="@drawable/clear"
+        android:textSize="16sp"
+        android:text="Undo Path"/>
+
+</RelativeLayout>
